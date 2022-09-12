@@ -25,5 +25,7 @@ public class UserController
         userService.changeRole(role, userPrincipal.getUsername());
 
         return ResponseEntity.ok(true);
+
+
     }
 }
