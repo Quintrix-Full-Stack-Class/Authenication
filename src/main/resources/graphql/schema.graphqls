@@ -1,0 +1,34 @@
+type Query {
+    cryptoAvailableCurrencies : [CryptoCurrency]
+    cryptoAllUsers : [CryptoUser]
+    cryptoFindUser(userId: String!) : CryptoUser
+    cryptoDaily(currency : String) : [CryptoDailyValue]
+    cryptoNews(currencies : [String]) : [CryptoNews]
+}
+
+type Mutation {
+    cryptoAddUser(user: String!, currencies: [String]): String
+}
+
+type CryptoCurrency {
+    id : String!
+    name : String
+}
+
+type CryptoUser {
+    userEmail : String!
+    currencies : [String]
+}
+
+type CryptoDailyValue {
+    date : String
+    value : Float
+}
+
+type CryptoNews {
+    title : String
+    url : String
+    summary : String
+    imageUrl : String
+    source : String
+}
