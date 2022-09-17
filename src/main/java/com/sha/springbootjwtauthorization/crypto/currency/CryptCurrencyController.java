@@ -20,12 +20,12 @@ import java.util.List;
 @Controller
 public class CryptCurrencyController {
 	//	private final ObjectMapper objectMapper = new ObjectMapper();
-	private final String API_KEY;
+	private final String API_KEY = "EZJLEL2H87V8ZL16";
 	private final List<Cache> cache = new ArrayList<>();
 	HttpClient httpClient = HttpClient.newHttpClient();
 
-	public CryptCurrencyController(Environment env) {
-		this.API_KEY = env.getProperty("API_KEY");
+	public CryptCurrencyController() {
+// 		this.API_KEY = env.getProperty("API_KEY");
 	}
 
 	@SchemaMapping(typeName = "Query", value = "cryptoDaily")
